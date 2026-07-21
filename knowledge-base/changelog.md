@@ -227,4 +227,5 @@
 - Fixed an issue where the Gallery overlay would not close when clicking the Logo or "Home" link in the navigation bar by proxying `onNavigate` in `LandingPage.jsx`.
 - Pushed the latest Policies page and Gallery overlay fixes to the remote GitHub repository.
 - Made the global navigation Header fully mobile responsive by implementing a slide-out hamburger menu toggle for devices under 768px.
+- Fixed an issue where the Products slider on the Landing Page was squishing cards into illegible vertical strips on mobile devices by adjusting the flex basis to 100%.
 - Build successfully verified via `npm run build`.
