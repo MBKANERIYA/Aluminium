@@ -726,12 +726,28 @@ textarea.form-control {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .product-card {
+    flex: 0 0 calc((100% - 40px) / 2);
+    min-width: calc((100% - 40px) / 2);
+    max-width: calc((100% - 40px) / 2);
+  }
 }
 
 @media (max-width: 768px) {
   .features-grid,
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .products-slider-wrapper {
+    padding: 0 40px;
   }
 
   .gallery-grid>div:nth-child(1),
