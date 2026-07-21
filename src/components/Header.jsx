@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight, Menu, X } from 'lucide-react';
 import './Header.css';
 
 const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,13 +36,14 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
         >
           Khetrapal Aluminium Manufacturing Pvt Ltd
         </div>
-        <div className="nav-links">
+        <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
           <a 
             href="#home" 
             className="nav-link" 
             style={{ color: currentPage === 'home' ? 'var(--color-orange)' : undefined }}
             onClick={(e) => { 
               e.preventDefault(); 
+              setIsMobileMenuOpen(false);
               onNavigate ? onNavigate('home', '#home') : (window.location.hash = '#home'); 
             }}
           >
@@ -53,6 +55,7 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
             style={{ color: currentPage === 'about' ? 'var(--color-orange)' : undefined }}
             onClick={(e) => { 
               e.preventDefault(); 
+              setIsMobileMenuOpen(false);
               onNavigate ? onNavigate('about') : (window.location.hash = '#about-page'); 
             }}
           >
@@ -83,6 +86,7 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
                   key={idx}
                   className="nav-dropdown-item"
                   onClick={() => {
+                    setIsMobileMenuOpen(false);
                     if (currentPage === 'products' && onSelectCategory) {
                       onSelectCategory(item);
                       window.scrollTo({ top: 400, behavior: 'smooth' });
@@ -103,6 +107,7 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
             className="nav-link" 
             onClick={(e) => { 
               e.preventDefault(); 
+              setIsMobileMenuOpen(false);
               onNavigate ? onNavigate('home', '#gallery') : (window.location.hash = '#gallery'); 
             }}
           >
@@ -113,6 +118,7 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
             style={{ color: currentPage === 'policies' ? 'var(--color-orange)' : undefined }}
             onClick={(e) => { 
               e.preventDefault(); 
+              setIsMobileMenuOpen(false);
               onNavigate ? onNavigate('policies') : (window.location.hash = '#policies-page'); 
             }}
           >
@@ -121,6 +127,7 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
           <button 
             className="btn-primary ml-4" 
             onClick={() => {
+              setIsMobileMenuOpen(false);
               if (onNavigate) onNavigate('contact');
               else window.location.hash = '#contact-page';
             }}
@@ -128,6 +135,12 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
             Contact Us <ArrowRight size={18} />
           </button>
         </div>
+        <button 
+          className="mobile-menu-btn"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
     </nav>
   );

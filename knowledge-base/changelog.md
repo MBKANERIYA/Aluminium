@@ -225,4 +225,6 @@
 - Created a new premium `Policies.jsx` page to elegantly display the company's Quality Policy and Health, Safety & Environment (HSE) Policy, updating global navigation links in Header and Footer to route to this new page.
 - Fixed a layout issue where the "Complete Gallery" overlay title was hidden behind the sticky navbar by increasing its top padding in `LandingPage.css`.
 - Fixed an issue where the Gallery overlay would not close when clicking the Logo or "Home" link in the navigation bar by proxying `onNavigate` in `LandingPage.jsx`.
+- Pushed the latest Policies page and Gallery overlay fixes to the remote GitHub repository.
+- Made the global navigation Header fully mobile responsive by implementing a slide-out hamburger menu toggle for devices under 768px.
 - Build successfully verified via `npm run build`.

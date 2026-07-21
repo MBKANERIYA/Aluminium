@@ -729,8 +729,14 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .features-grid {
+  .features-grid,
+  .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-grid>div:nth-child(1),
+  .gallery-grid>div:nth-child(4) {
+    grid-row: span 1;
   }
 
   .slider-btn.left {
