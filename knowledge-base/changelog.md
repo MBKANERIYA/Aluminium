@@ -222,3 +222,4 @@
 - Added multi-image support to the product detail view: Aluminium Cubes now has 8 gallery images that auto-slide every 3 seconds with crossfade transitions and dot navigation. The system supports `images[]` arrays on any product, falling back to the single `image` field for products without multiple images.
 - Added a two-column grid layout to the `About Us` page hero section, introducing a dedicated hero image on the right side.
 - Build successfully verified via `npm run build`.
+- Initialized local Git repository, committed all assets, and pushed source code to remote repository `https://github.com/MBKANERIYA/Aluminium.git`.
