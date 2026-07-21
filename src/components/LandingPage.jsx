@@ -84,8 +84,17 @@ const LandingPage = ({ onNavigate }) => {
   return (
     <div className="landing-page">
       {/* Navigation */}
-      <Header onNavigate={onNavigate} currentPage="home" />
-
+      <Header 
+        onNavigate={(page, hash, category) => {
+          // Close gallery overlay on any navigation action
+          setShowGallery(false);
+          setSelectedImage(null);
+          if (onNavigate) {
+            onNavigate(page, hash, category);
+          }
+        }} 
+        currentPage="home" 
+      />
 
 
 

@@ -109,11 +109,11 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
             Gallery
           </a>
           <a 
-            href="#policies" 
             className="nav-link" 
+            style={{ color: currentPage === 'policies' ? 'var(--color-orange)' : undefined }}
             onClick={(e) => { 
               e.preventDefault(); 
-              onNavigate ? onNavigate('home', '#policies') : (window.location.hash = '#policies'); 
+              onNavigate ? onNavigate('policies') : (window.location.hash = '#policies-page'); 
             }}
           >
             Policies

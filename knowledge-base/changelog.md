@@ -221,5 +221,8 @@
 - Converted the static hero image on the landing page into an auto-sliding carousel cycling through all 5 product images (Notch Bars, Cubes, Shots, Ingots, Powder) with product name labels and dot navigation, auto-advancing every 3 seconds with a smooth crossfade transition.
 - Added multi-image support to the product detail view: Aluminium Cubes now has 8 gallery images that auto-slide every 3 seconds with crossfade transitions and dot navigation. The system supports `images[]` arrays on any product, falling back to the single `image` field for products without multiple images.
 - Added a two-column grid layout to the `About Us` page hero section, introducing a dedicated hero image on the right side.
-- Build successfully verified via `npm run build`.
 - Initialized local Git repository, committed all assets, and pushed source code to remote repository `https://github.com/MBKANERIYA/Aluminium.git`.
+- Created a new premium `Policies.jsx` page to elegantly display the company's Quality Policy and Health, Safety & Environment (HSE) Policy, updating global navigation links in Header and Footer to route to this new page.
+- Fixed a layout issue where the "Complete Gallery" overlay title was hidden behind the sticky navbar by increasing its top padding in `LandingPage.css`.
+- Fixed an issue where the Gallery overlay would not close when clicking the Logo or "Home" link in the navigation bar by proxying `onNavigate` in `LandingPage.jsx`.
+- Build successfully verified via `npm run build`.

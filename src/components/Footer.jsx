@@ -31,7 +31,7 @@ const Footer = ({ onNavigate }) => {
             <ul>
               <li><a href="#home" onClick={(e) => handleNav(e, 'home', '#home')}>Home</a></li>
               <li><a href="#about-page" onClick={(e) => handleNav(e, 'about')}>About us</a></li>
-              <li><a href="#policies" onClick={(e) => handleNav(e, 'home', '#policies')}>How It Works</a></li>
+              <li><a href="#policies-page" onClick={(e) => handleNav(e, 'policies')}>How It Works</a></li>
               <li><a href="#contact-page" onClick={(e) => handleNav(e, 'contact')}>Contact us</a></li>
             </ul>
           </div>
@@ -47,8 +47,8 @@ const Footer = ({ onNavigate }) => {
           <div className="footer-links">
             <h4>Legal</h4>
             <ul>
-              <li><a href="#policies" onClick={(e) => handleNav(e, 'home', '#policies')}>Policies</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#policies-page" onClick={(e) => handleNav(e, 'policies')}>Policies</a></li>
+              <li><a href="#policies-page" onClick={(e) => handleNav(e, 'policies')}>Privacy Policy</a></li>
               <li><a href="#">Terms of Service</a></li>
             </ul>
           </div>

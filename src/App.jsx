@@ -3,6 +3,7 @@ import LandingPage from './components/LandingPage';
 import AboutUs from './components/AboutUs';
 import Products from './components/Products';
 import ContactUs from './components/ContactUs';
+import Policies from './components/Policies';
 import './index.css';
 
 function App() {
@@ -21,8 +22,11 @@ function App() {
       } else if (hash === '#contact-page') {
         setCurrentPage('contact');
         window.scrollTo(0, 0);
+      } else if (hash === '#policies-page') {
+        setCurrentPage('policies');
+        window.scrollTo(0, 0);
       } else if (hash === '#home' || hash === '' || hash.startsWith('#')) {
-        if (hash === '#about-page' || hash.startsWith('#products-page') || hash === '#contact-page') return;
+        if (hash === '#about-page' || hash.startsWith('#products-page') || hash === '#contact-page' || hash === '#policies-page') return;
         if (currentPage !== 'home') {
           setCurrentPage('home');
           setTimeout(() => {
@@ -41,6 +45,8 @@ function App() {
       setCurrentPage('products');
     } else if (window.location.hash === '#contact-page') {
       setCurrentPage('contact');
+    } else if (window.location.hash === '#policies-page') {
+      setCurrentPage('policies');
     }
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, [currentPage]);
@@ -56,6 +62,9 @@ function App() {
       window.scrollTo(0, 0);
     } else if (page === 'contact') {
       window.location.hash = '#contact-page';
+      window.scrollTo(0, 0);
+    } else if (page === 'policies') {
+      window.location.hash = '#policies-page';
       window.scrollTo(0, 0);
     } else {
       if (sectionHash) {
@@ -77,6 +86,7 @@ function App() {
       {currentPage === 'about' && <AboutUs onNavigate={navigateTo} />}
       {currentPage === 'products' && <Products onNavigate={navigateTo} initialCategory={selectedCategory} />}
       {currentPage === 'contact' && <ContactUs onNavigate={navigateTo} />}
+      {currentPage === 'policies' && <Policies onNavigate={navigateTo} />}
     </div>
   );
 }
