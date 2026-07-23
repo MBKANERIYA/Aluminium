@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-23 — Footer Mobile Responsive Tweaks
+**What**: Updated footer mobile layout to display the "Company" and "Products" link sections side-by-side, with "Legal" alone on the next row.
+**Why**: User requested the 3-column link set to show 2 in a row and the 3rd alone on mobile screens to save vertical space.
+**Files Changed**: `src/components/Footer.css`
+- Modified `.footer-grid` mobile breakpoint (`768px`) to use `grid-template-columns: 1fr 1fr;`
+- Made `.footer-about` and `.footer-links:last-child` span full width (`grid-column: 1 / -1;`)
+
+
 ## 2026-07-23 — Mobile Responsive Improvements
 **What**: Fixed mobile layout for hero section ordering, 2-column grids, and reduced heading sizes.
 **Why**: User reported poor mobile responsiveness — stats/features were single-column, hero text appeared before slider, and heading was too large.
