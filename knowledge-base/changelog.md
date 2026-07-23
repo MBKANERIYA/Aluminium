@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-07-23 — Mobile Responsive Improvements
+**What**: Fixed mobile layout for hero section ordering, 2-column grids, and reduced heading sizes.
+**Why**: User reported poor mobile responsiveness — stats/features were single-column, hero text appeared before slider, and heading was too large.
+**Files Changed**: `src/components/LandingPage.css`, `src/components/Products.css`
+- Hero section: slider now appears first (before text) on mobile/tablet using CSS `order: -1`
+- Reduced hero heading font size from `4.5rem` → `3.5rem` desktop, `2.8rem` tablet, `2.2rem` mobile, `1.8rem` small mobile
+- Stats grid and features grid now show **2 columns** on mobile (768px) instead of 1
+- Gallery grid now shows 2 columns on mobile with adjusted row heights
+- Added 480px breakpoint for small phones with further size reductions
+- Products collection grid on Products page now shows 2 columns on 768px
+- Added hero buttons `flex-wrap` for mobile and reduced hero paragraph font size
+
+
 ## 2026-07-20 — Initial Project Setup & Landing Page Redesign
 **What**: Initialized Vite React project and built the premium landing page UI.
 **Why**: User requested a complete UI/UX redesign with a premium industrial aesthetic.

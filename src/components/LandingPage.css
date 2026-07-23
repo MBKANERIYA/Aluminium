@@ -154,7 +154,7 @@
 }
 
 .hero-content h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   margin-bottom: 24px;
   letter-spacing: -1px;
 }
@@ -714,6 +714,14 @@ textarea.form-control {
     grid-template-columns: 1fr;
   }
 
+  .hero-visual {
+    order: -1;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+
   .hero-image,
   .about-image {
     height: 400px;
@@ -737,7 +745,24 @@ textarea.form-control {
 @media (max-width: 768px) {
   .features-grid,
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-visual {
+    order: -1;
+    height: 300px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
   }
 
   .product-card {
@@ -748,6 +773,11 @@ textarea.form-control {
 
   .products-slider-wrapper {
     padding: 0 40px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
   }
 
   .gallery-grid>div:nth-child(1),
@@ -763,12 +793,28 @@ textarea.form-control {
     right: -10px;
   }
 
-  .nav-links {
-    display: none;
+  .stat-number {
+    font-size: 2rem;
   }
 
-  .hero-content h1 {
-    font-size: 3rem;
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .feature-card {
+    padding: 25px 18px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .feature-card p {
+    font-size: 0.88rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
   }
 
   .timeline::before {
@@ -788,5 +834,48 @@ textarea.form-control {
 
   .timeline-content {
     width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-visual {
+    height: 250px;
+  }
+
+  .stats-grid {
+    gap: 16px;
+  }
+
+  .stat-number {
+    font-size: 1.7rem;
+  }
+
+  .features-grid {
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 20px 14px;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .gallery-grid {
+    grid-auto-rows: 140px;
+    gap: 12px;
+  }
+
+  .contact-grid {
+    gap: 30px;
   }
 }

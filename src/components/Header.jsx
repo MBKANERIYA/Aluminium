@@ -29,45 +29,45 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
-        <div 
-          className="nav-logo" 
-          onClick={() => onNavigate ? onNavigate('home', '#home') : (window.location.hash = '#home')} 
+        <div
+          className="nav-logo"
+          onClick={() => onNavigate ? onNavigate('home', '#home') : (window.location.hash = '#home')}
           style={{ cursor: 'pointer' }}
         >
           Khetrapal Aluminium Manufacturing Pvt Ltd
         </div>
         <div className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <a 
-            href="#home" 
-            className="nav-link" 
+          <a
+            href="#home"
+            className="nav-link"
             style={{ color: currentPage === 'home' ? 'var(--color-orange)' : undefined }}
-            onClick={(e) => { 
-              e.preventDefault(); 
+            onClick={(e) => {
+              e.preventDefault();
               setIsMobileMenuOpen(false);
-              onNavigate ? onNavigate('home', '#home') : (window.location.hash = '#home'); 
+              onNavigate ? onNavigate('home', '#home') : (window.location.hash = '#home');
             }}
           >
             Home
           </a>
-          <a 
-            href="#about-page" 
-            className="nav-link" 
+          <a
+            href="#about-page"
+            className="nav-link"
             style={{ color: currentPage === 'about' ? 'var(--color-orange)' : undefined }}
-            onClick={(e) => { 
-              e.preventDefault(); 
+            onClick={(e) => {
+              e.preventDefault();
               setIsMobileMenuOpen(false);
-              onNavigate ? onNavigate('about') : (window.location.hash = '#about-page'); 
+              onNavigate ? onNavigate('about') : (window.location.hash = '#about-page');
             }}
           >
             About Us
           </a>
           <div className="nav-item-dropdown">
-            <a 
-              href="#products-page" 
-              className="nav-link" 
+            <a
+              href="#products-page"
+              className="nav-link"
               style={{ color: currentPage === 'products' ? 'var(--color-orange)' : undefined }}
-              onClick={(e) => { 
-                e.preventDefault(); 
+              onClick={(e) => {
+                e.preventDefault();
                 if (currentPage === 'products' && onSelectCategory) {
                   onSelectCategory('All');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -102,30 +102,30 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
               ))}
             </div>
           </div>
-          <a 
-            href="#gallery" 
-            className="nav-link" 
-            onClick={(e) => { 
-              e.preventDefault(); 
+          <a
+            href="#gallery"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
               setIsMobileMenuOpen(false);
-              onNavigate ? onNavigate('home', '#gallery') : (window.location.hash = '#gallery'); 
+              onNavigate ? onNavigate('home', '#gallery') : (window.location.hash = '#gallery');
             }}
           >
             Gallery
           </a>
-          <a 
-            className="nav-link" 
+          <a
+            className="nav-link"
             style={{ color: currentPage === 'policies' ? 'var(--color-orange)' : undefined }}
-            onClick={(e) => { 
-              e.preventDefault(); 
+            onClick={(e) => {
+              e.preventDefault();
               setIsMobileMenuOpen(false);
-              onNavigate ? onNavigate('policies') : (window.location.hash = '#policies-page'); 
+              onNavigate ? onNavigate('policies') : (window.location.hash = '#policies-page');
             }}
           >
             Policies
           </a>
-          <button 
-            className="btn-primary ml-4" 
+          <button
+            className="btn-primary ml-4"
             onClick={() => {
               setIsMobileMenuOpen(false);
               if (onNavigate) onNavigate('contact');
@@ -135,7 +135,7 @@ const Header = ({ onNavigate, currentPage = 'home', onSelectCategory }) => {
             Contact Us <ArrowRight size={18} />
           </button>
         </div>
-        <button 
+        <button
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >

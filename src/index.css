@@ -2,34 +2,48 @@
 
 :root {
   /* Premium Industrial Navy & Steel Blue Color Palette (Hydro/Hindalco/Schüco Inspired) */
-  --color-primary: #1F3B68;       /* Deep Industrial Navy */
-  --color-primary-hover: #294C7A; /* Steel Blue Hover */
-  --color-secondary: #3E5F8A;     /* Steel Blue */
-  --color-accent: #C8D0D9;        /* Aluminum Silver */
-  
-  --color-white: #111827;         /* Primary Text */
+  --color-primary: #1F3B68;
+  /* Deep Industrial Navy */
+  --color-primary-hover: #294C7A;
+  /* Steel Blue Hover */
+  --color-secondary: #3E5F8A;
+  /* Steel Blue */
+  --color-accent: #C8D0D9;
+  /* Aluminum Silver */
+
+  --color-white: #111827;
+  /* Primary Text */
   --color-text-primary: #111827;
   --color-text-secondary: #475569;
-  --color-silver: #475569;        /* Secondary Text */
-  --color-metallic: #C8D0D9;      /* Aluminum Silver */
-  
-  --color-orange: #1F3B68;        /* Primary Accent mapped to Deep Industrial Navy */
+  --color-silver: #475569;
+  /* Secondary Text */
+  --color-metallic: #C8D0D9;
+  /* Aluminum Silver */
+
+  --color-orange: #1F3B68;
+  /* Primary Accent mapped to Deep Industrial Navy */
   --color-orange-glow: rgba(31, 59, 104, 0.15);
-  
-  --color-bg-dark: #FFFFFF;       /* Global Background */
-  --color-navy: #F8FAFC;          /* Section Background Alt */
-  --color-bg-card: #FFFFFF;       /* Card Background */
-  --color-footer-bg: #162A45;     /* Dark Navy Footer */
-  
-  --color-border: #E5E7EB;        /* Thin Border */
-  --color-border-hover: #3E5F8A;  /* Steel Blue hover border */
-  
+
+  --color-bg-dark: #FFFFFF;
+  /* Global Background */
+  --color-navy: #F8FAFC;
+  /* Section Background Alt */
+  --color-bg-card: #FFFFFF;
+  /* Card Background */
+  --color-footer-bg: #162A45;
+  /* Dark Navy Footer */
+
+  --color-border: #E5E7EB;
+  /* Thin Border */
+  --color-border-hover: #3E5F8A;
+  /* Steel Blue hover border */
+
   --font-heading: 'Outfit', 'Space Grotesk', sans-serif;
   --font-body: 'Plus Jakarta Sans', 'Manrope', sans-serif;
-  
+
   --radius-card: 18px;
   --radius-btn: 18px;
-  
+
   --shadow-soft: 0 10px 30px rgba(17, 24, 39, 0.05);
   --shadow-glow: 0 6px 20px rgba(31, 59, 104, 0.15);
 }
@@ -48,7 +62,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: #1F3B68;
@@ -83,14 +102,22 @@ a {
 .image-placeholder::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(45deg, transparent, rgba(200, 208, 217, 0.1), transparent);
   animation: shine 3s infinite linear;
 }
 
 @keyframes shine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Base Layout Constraints */
