@@ -58,7 +58,7 @@
 }
 
 .about-hero h1 {
-  font-size: 4.2rem;
+  font-size: 3.5rem;
   margin-bottom: 24px;
   letter-spacing: -1px;
 }
@@ -360,14 +360,15 @@
 
   .about-hero-visual {
     height: 400px;
+    order: -1;
   }
 
   .pillars-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-hero h1 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   .cta-box {
@@ -397,7 +398,7 @@
   }
 
   .about-hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .about-hero {
@@ -406,6 +407,7 @@
 
   .about-hero-visual {
     height: 300px;
+    order: -1;
   }
 
   .about-hero-stats {
@@ -414,15 +416,33 @@
   }
 
   .stats-banner-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 35px;
   }
 
   .stats-banner-num {
-    font-size: 2.8rem;
+    font-size: 2rem;
   }
 
   .cta-content h2 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 1.8rem;
+  }
+  .about-hero-visual {
+    height: 250px;
+  }
+  .stats-banner-grid {
+    gap: 16px;
+  }
+  .stats-banner-num {
+    font-size: 1.7rem;
+  }
+  .pillars-grid {
+    grid-template-columns: 1fr;
   }
 }

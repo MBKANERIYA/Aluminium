@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-07-23 — Global Responsive Styling Updates
+**What**: Standardized responsive behavior across all pages (About Us, Contact Us, Products, Policies) to match the Landing Page.
+**Why**: User requested that all pages share the same responsive design patterns (smaller headings, 2-column mobile grids, hero image order).
+**Files Changed**: `src/components/AboutUs.css`, `src/components/ContactUs.css`, `src/components/Products.css`, `src/components/Policies.css`
+- Applied standard hero heading (`h1`) font sizes across all breakpoints (3.5rem desktop, 2.8rem tablet, 2.2rem mobile, 1.8rem small mobile).
+- Updated grids on the About Us page (stats banner, pillars grid) and Contact Us page (contact cards) to use `grid-template-columns: repeat(2, 1fr)` on mobile.
+- Applied `order: -1` to the hero visual in `AboutUs.css` so the image appears before text on mobile/tablet devices, consistent with the landing page.
+- Added 480px small mobile breakpoints to all pages for fine-tuned scaling.
+
+
 ## 2026-07-23 — Footer Mobile Responsive Tweaks
 **What**: Updated footer mobile layout to display the "Company" and "Products" link sections side-by-side, with "Legal" alone on the next row.
 **Why**: User requested the 3-column link set to show 2 in a row and the 3rd alone on mobile screens to save vertical space.
